@@ -184,46 +184,35 @@ dd {
     max-width: 1600px;
     padding: 0 2rem;
 }
+
 @media (min-width: 640px) {
     .container {
         padding: 0 6rem;
     }
 }
-@media (min-width: 1280px) {
-    .container {
-        padding: 0 8rem;
-    }
-}
 
 .container-main {
-    padding-bottom: 200px;
-}
-
-.row {
     display: flex;
+    justify-content: space-between;
     position: relative;
-    margin: 0 -10px;
-}
-.row:after {
-    visibility: hidden;
-    display: block;
-    content: "";
-    clear: both;
-    height: 0;
+    margin: 2rem auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 .col-4,
 .col-8 {
     box-sizing: border-box;
     float: left;
-    padding: 0 10px;
+    padding: 0 1rem;
 }
 
 .col-4 {
-    width: 33.3333333333%;
+    min-width: fit-content;
+    max-width: 33.3333333333%;
 }
 .col-8 {
-    width: 66.6666666667%;
+    max-width: 66.6666666667%;
 }
 
 ul.tsd-descriptions > li > :first-child,
@@ -401,6 +390,7 @@ blockquote {
 @media (max-width: 1024px) {
     html .col-content {
         float: none;
+        max-width: 100%;
         width: 100%;
     }
     html .col-menu {
@@ -479,14 +469,6 @@ blockquote {
     .has-menu .tsd-navigation {
         max-height: 100%;
     }
-}
-
-.tsd-page-title {
-    padding: 70px 0 20px 0;
-    margin: 0 0 40px 0;
-}
-.tsd-page-title h1 {
-    margin: 0;
 }
 
 .tsd-breadcrumb {
@@ -759,6 +741,11 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     padding: 0;
 }
 
+.tsd-navigation.primary ul {
+    /* Extra rem makes it visible that there are more items to scroll to. */
+    max-height: 11rem;
+    overflow-y: auto;
+}
 .tsd-navigation.primary a {
     padding: 0.75rem 0.5rem;
     margin: 0;
@@ -797,6 +784,8 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
 }
 
 .tsd-navigation.secondary {
+    display: flex;
+    min-height: 0;
     top: calc(0.5rem + 40px);
     transition: 0.3s;
 }
@@ -805,6 +794,7 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     top: 0.5rem;
 }
 .tsd-navigation.secondary ul {
+    overflow: scroll;
     padding-right: 0.5rem;
     transition: opacity 0.2s;
 }
@@ -890,7 +880,11 @@ a.tsd-index-link {
 
 @media (min-width: 1024px) {
     .menu-sticky-wrap {
-        position: static;
+        position: sticky;
+        height: 90vh;
+        right: 0;
+        top: 5rem;
+        transition: 0.5s ease-in-out;
     }
     .tsd-navigation.secondary {
         max-height: calc(100vh - 1rem);
@@ -899,6 +893,14 @@ a.tsd-index-link {
     }
     .col-menu .tsd-navigation:not(:last-child) {
         padding-bottom: 1.5rem;
+    }
+    .col-menu.menu-sticky-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .col-menu--hide {
+        top: 2rem;
+        height: 95vh;
     }
 }
 
@@ -1132,7 +1134,6 @@ ul.tsd-type-parameter-list h5 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px;
     color: var(--color-text);
     background: var(--color-background-secondary);
     border-bottom: 1px var(--color-accent) solid;
