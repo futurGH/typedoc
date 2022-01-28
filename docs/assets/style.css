@@ -191,6 +191,12 @@ dd {
     }
 }
 
+@media (min-width: 1600px) {
+    .container {
+        padding: 0 12rem;
+    }
+}
+
 .container-main {
     display: flex;
     justify-content: space-between;
@@ -349,6 +355,7 @@ pre {
 
 pre {
     padding: 10px;
+    border: 0.1em solid var(--color-accent);
 }
 pre code {
     padding: 0;
@@ -740,10 +747,11 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     padding: 0;
 }
 
-.tsd-navigation.primary ul {
+.tsd-navigation.primary .tsd-accordion-details > ul {
     /* Extra rem makes it visible that there are more items to scroll to. */
     max-height: 11rem;
     overflow-y: auto;
+    margin-top: 1rem;
 }
 .tsd-navigation.primary a {
     padding: 0.75rem 0.5rem;
@@ -787,6 +795,7 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     min-height: 0;
     top: calc(0.5rem + 40px);
     transition: 0.3s;
+    margin-top: 1rem;
 }
 .tsd-navigation.secondary.tsd-navigation--toolbar-hide {
     max-height: calc(100vh - 1rem);
