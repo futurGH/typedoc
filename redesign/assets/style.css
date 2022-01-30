@@ -758,7 +758,7 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
 }
 
 .tsd-navigation.primary .tsd-accordion-details > ul {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 }
 .tsd-navigation.primary a {
     padding: 0.75rem 0.5rem;
@@ -799,7 +799,6 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
 
 .tsd-navigation.secondary {
     display: flex;
-    min-height: 0;
     top: calc(0.5rem + 40px);
     transition: 0.3s;
 }
@@ -808,7 +807,6 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     top: 0.5rem;
 }
 .tsd-navigation.secondary > ul {
-    overflow-y: auto;
     padding-right: 0.5rem;
     transition: opacity 0.2s;
 }
@@ -899,6 +897,7 @@ a.tsd-index-link {
         right: 0;
         top: 5rem;
         transition: 0.5s ease-in-out;
+        overflow-y: auto;
     }
     .tsd-navigation.secondary {
         max-height: calc(100vh - 1rem);
