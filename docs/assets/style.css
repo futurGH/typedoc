@@ -216,7 +216,7 @@ dd {
 .col-8 {
     box-sizing: border-box;
     float: left;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
 }
 
 .col-4 {
@@ -614,12 +614,10 @@ html:not(.filter-inherited) .tsd-is-inherited {
 input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     stroke: var(--color-text);
 }
-.tsd-filter-input input:disabled ~ svg {
-    outline-offset: -2px;
-    outline: 3px var(--color-accent) solid;
-}
 .tsd-filter-input input:disabled ~ svg > .tsd-checkbox-background {
     fill: var(--color-background);
+    stroke: var(--color-accent);
+    stroke-width: 0.25rem;
 }
 .tsd-filter-input input:disabled ~ svg > .tsd-checkbox-checkmark {
     stroke: var(--color-accent);
