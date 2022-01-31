@@ -866,11 +866,6 @@ a.tsd-index-link {
 }
 .tsd-index-accordion .tsd-accordion-summary svg {
     margin-right: 0.25rem;
-    transform: rotate(-90deg);
-    transition: 0.3s transform ease;
-}
-.tsd-index-accordion[open] .tsd-accordion-summary svg {
-    transform: rotate(0deg);
 }
 .tsd-index-content > :not(:first-child) {
     margin-top: 0.75rem;
