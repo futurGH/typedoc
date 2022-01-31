@@ -716,6 +716,7 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
 }
 .tsd-member .tsd-anchor + h3 {
     display: flex;
+    align-items: center;
     margin-top: 0;
     margin-bottom: 0;
     border-bottom: none;
@@ -889,7 +890,8 @@ a.tsd-index-link {
         right: 0;
         padding-top: 1rem;
         top: 3rem;
-        transition: top, padding, height 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        transition-property: top, padding-top, height;
         overflow-y: auto;
     }
     .col-menu .tsd-navigation:not(:last-child) {
