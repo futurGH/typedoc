@@ -201,13 +201,15 @@ dd {
     }
 }
 
+.tsd-generator > p {
+    padding: 0 1rem;
+}
+
 .container-main {
     display: flex;
     justify-content: space-between;
     position: relative;
     margin: 2rem auto;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
 }
 
 .col-4,
@@ -578,6 +580,7 @@ html:not(.filter-inherited) .tsd-is-inherited {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    cursor: pointer;
 }
 .tsd-filter-input input[type="checkbox"] {
     cursor: pointer;
@@ -598,9 +601,6 @@ html:not(.filter-inherited) .tsd-is-inherited {
     /* Leaving this at full opacity breaks event listeners on Firefox.
     Don't remove unless you know what you're doing. */
     opacity: 0.99;
-}
-.tsd-filter-input svg * {
-    transition: all 0.2s linear;
 }
 .tsd-filter-input input[type="checkbox"]:focus + svg {
     transform: scale(0.95);
@@ -801,11 +801,6 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     padding-top: 20px;
 }
 
-.tsd-navigation.secondary {
-    display: flex;
-    top: calc(0.5rem + 40px);
-    transition: 0.3s;
-}
 .tsd-navigation.secondary.tsd-navigation--toolbar-hide {
     max-height: calc(100vh - 1rem);
     top: 0.5rem;
@@ -892,10 +887,11 @@ a.tsd-index-link {
 @media (min-width: 1024px) {
     .menu-sticky-wrap {
         position: sticky;
-        height: 90vh;
+        height: 94vh;
         right: 0;
-        top: 5rem;
-        transition: 0.5s ease-in-out;
+        padding-top: 1rem;
+        top: 3rem;
+        transition: top, padding, height 0.3s ease-in-out;
         overflow-y: auto;
     }
     .col-menu .tsd-navigation:not(:last-child) {
@@ -906,7 +902,9 @@ a.tsd-index-link {
         flex-direction: column;
     }
     .col-menu--hide {
-        top: 2rem;
+        top: 1rem;
+        height: calc(100vh - 2rem);
+        padding: 0 1rem;
     }
 }
 
@@ -1143,7 +1141,7 @@ ul.tsd-type-parameter-list h5 {
     color: var(--color-text);
     background: var(--color-background-secondary);
     border-bottom: 1px var(--color-accent) solid;
-    transition: transform 0.3s linear;
+    transition: transform 0.3s ease-in-out;
 }
 .tsd-page-toolbar a {
     color: var(--color-text);
