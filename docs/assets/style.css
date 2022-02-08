@@ -844,9 +844,9 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
 }
 
 a.tsd-index-link {
-    margin: 0.1rem 0;
+    margin: 0.25rem 0;
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 1.25rem;
     display: inline-flex;
     align-items: center;
 }
