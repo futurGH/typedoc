@@ -80,6 +80,7 @@
 
 body {
     margin: 0;
+    color-scheme: light dark;
 }
 
 body.light {
@@ -234,6 +235,7 @@ dd {
 .col-8 {
     flex: 1 0;
     flex-wrap: wrap;
+    padding-left: 0;
 }
 
 ul.tsd-descriptions > li > :first-child,
@@ -754,7 +756,8 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
 }
 
 .tsd-navigation {
-    margin: 0 0 0 40px;
+    margin: auto;
+    width: 100%;
 }
 .tsd-navigation a {
     display: block;
@@ -821,6 +824,7 @@ input[type="checkbox"]:checked ~ svg .tsd-checkbox-checkmark {
     top: 0.5rem;
 }
 .tsd-navigation.secondary > ul {
+    display: inline;
     padding-right: 0.5rem;
     transition: opacity 0.2s;
 }
@@ -856,6 +860,7 @@ a.tsd-index-link {
 .tsd-accordion-summary > h4,
 .tsd-accordion-summary > h5 {
     display: inline-flex;
+    align-items: center;
     vertical-align: middle;
     margin-bottom: 0;
     user-select: none;
@@ -929,11 +934,11 @@ a.tsd-index-link {
     .col-menu.menu-sticky-wrap {
         display: flex;
         flex-direction: column;
+        padding: 0 1.5rem;
     }
     .col-menu--hide {
         top: 1rem;
         height: calc(100vh - 2rem);
-        padding: 0 1rem;
     }
 }
 
