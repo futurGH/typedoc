@@ -4,7 +4,7 @@
     --light-color-background-secondary: #eff0f1;
     --light-color-icon-background: var(--light-color-background);
     --light-color-accent: #c5c7c9;
-    --light-color-text: #222;
+    --light-color-text: #303439;
     --light-color-text-aside: #707070;
     --light-color-link: #4da6ff;
     --light-color-ts: #db1373;
@@ -22,7 +22,7 @@
     --dark-color-background-secondary: #151619;
     --dark-color-icon-background: #263238;
     --dark-color-accent: #454545;
-    --dark-color-text: #f5f5f5;
+    --dark-color-text: #cfcfcf;
     --dark-color-text-aside: #e6e4e4;
     --dark-color-link: #00aff4;
     --dark-color-ts: #ff6492;
@@ -927,11 +927,11 @@ a.tsd-index-link {
     .col-menu {
         border-left: 1px solid var(--color-accent);
     }
-    .col-menu .tsd-navigation:not(:last-child) {
-        padding-bottom: 1.75rem;
-    }
     .col-menu--hide {
         top: 1rem;
+    }
+    .col-menu .tsd-navigation:not(:last-child) {
+        padding-bottom: 1.75rem;
     }
 }
 
@@ -1011,7 +1011,7 @@ a.tsd-index-link {
     margin: 0;
     padding: 0;
     list-style: none;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--color-accent);
 }
 #tsd-search .results li {
     padding: 0 10px;
@@ -1038,7 +1038,7 @@ a.tsd-index-link {
     font-weight: normal;
 }
 #tsd-search.has-focus {
-    background-color: var(--color-accent);
+    background-color: var(--color-background-secondary);
 }
 #tsd-search.has-focus .field input {
     top: 0;
@@ -1175,7 +1175,7 @@ ul.tsd-type-parameter-list h5 {
     left: 0;
     width: 100%;
     color: var(--color-text);
-    background: var(--color-background-secondary);
+    background: var(--color-background);
     border-bottom: 1px var(--color-accent) solid;
     transition: transform 0.3s ease-in-out;
 }
