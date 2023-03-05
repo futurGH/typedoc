@@ -1,4 +1,4 @@
 *
-!docs/
-!redesign/
-!original/
+!docs/**/*
+!redesign/**/*
+!original/**/*
